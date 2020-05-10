@@ -16,4 +16,4 @@ docker-compose up -d
 docker-compose exec web bash
 ```
 これで開発の準備は終わり！次のアドレスにアクセスすると/html/においたphpが確認できる→http://localhost<br>
-phpmyadminは次のでアクセス可能→http://localhost:8080/
+phpmyadminは次のでアクセス可能→http://localhost:8903/

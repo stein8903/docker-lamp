@@ -1,8 +1,7 @@
 FROM centos:centos8
 
-RUN dnf -y update
-
 # apache, phpパッケージなどを導入
+RUN dnf -y update
 RUN dnf -y install httpd
 RUN dnf install -y php php-mbstring php-xml php-xmlrpc php-gd php-pdo php-mysqlnd php-json php-fpm
 RUN dnf -y install mysql

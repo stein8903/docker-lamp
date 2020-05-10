@@ -1,2 +1,4 @@
 /html/*
 !/html/info.php
+
+/db/mysql_data
