@@ -1,11 +1,11 @@
 /html/*
 !/html/info.php
 
-/db/my.cnf/*
-!/db/my.cnf/.gitkeep
+/docker/db/my.cnf/*
+!/docker/db/my.cnf/.gitkeep
 
-/db/mysql_data/*
-!/db/mysql_data/.gitkeep
+/docker/db/mysql_data/*
+!/docker/db/mysql_data/.gitkeep
 
-/db/mysql_init/*
-!/db/mysql_init/.gitkeep
+/docker/db/mysql_init/*
+!/docker/db/mysql_init/.gitkeep
