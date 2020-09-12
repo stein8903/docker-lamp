@@ -11,7 +11,8 @@ services:
       - db
     volumes:
       - "./html/:/var/www/html"
-      - "./web/apache.conf:/etc/httpd/conf/httpd.conf"
+      # - "./web/httpd.conf:/etc/httpd/conf/httpd.conf"
+      # - "./web/php.ini:/etc/opt/remi/php73/php.ini"
     container_name: "klamp-web"
     hostname: "klamp-web"
   db:
