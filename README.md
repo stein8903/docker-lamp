@@ -17,3 +17,6 @@ docker-compose exec web bash
 ```
 これで開発の準備は終わり！次のアドレスにアクセスすると/html/においたphpが確認できる→http://localhost<br>
 phpmyadminは次のでアクセス可能→http://localhost:8903/
+
+下記のディレクトリーにsqlファイルを置いておいたらimage起動時にデータの初期化ができる。
+./db/mysql_init/
