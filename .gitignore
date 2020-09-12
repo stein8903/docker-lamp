@@ -1,4 +1,11 @@
 /html/*
 !/html/info.php
 
-/db/mysql_data
+/db/my.cnf/*
+!/db/my.cnf/.gitkeep
+
+/db/mysql_data/*
+!/db/mysql_data/.gitkeep
+
+/db/mysql_init/*
+!/db/mysql_init/.gitkeep
