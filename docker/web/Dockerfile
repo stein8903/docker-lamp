@@ -4,8 +4,11 @@ FROM centos:centos8
 RUN dnf -y update
 # RUN dnf -y install httpd
 # RUN dnf install -y php php-mbstring php-xml php-xmlrpc php-gd php-pdo php-mysqlnd php-json php-fpm
-RUN dnf -y install mysql
-RUN dnf -y install zip unzip
+RUN dnf -y install \
+  sudo
+  wget
+  mysql
+  zip unzip
 
 # inatall httpd
 RUN dnf -y install httpd httpd-tools
@@ -38,7 +41,8 @@ RUN \
     php73-php-intl \
     php73-php-opcache --nogpgcheck \
     php73-php-json \
-    php73-php-pecl-xdebug
+    php73-php-pecl-xdebug \
+    php73-php-zip
 
 RUN ln -s /bin/php73 /bin/php
 
@@ -56,6 +60,13 @@ COPY php.ini /etc/opt/remi/php73/php.ini
 # composerのインストール
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
+
+# symfonyのCLIインストール
+RUN wget https://get.symfony.com/cli/installer -O - | bash
+RUN echo 'export PATH="$HOME/.symfony/bin:$PATH"' >> ~/.bash_profile
+
+# oilコマンド(FuelPHPのCLI)インストール
+RUN curl https://get.fuelphp.com/oil | sh
 
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 
