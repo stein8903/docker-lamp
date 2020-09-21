@@ -5,9 +5,9 @@ RUN dnf -y update
 # RUN dnf -y install httpd
 # RUN dnf install -y php php-mbstring php-xml php-xmlrpc php-gd php-pdo php-mysqlnd php-json php-fpm
 RUN dnf -y install \
-  sudo
-  wget
-  mysql
+  sudo \
+  wget \
+  mysql \
   zip unzip
 
 # inatall httpd
