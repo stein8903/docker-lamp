@@ -64,6 +64,7 @@ RUN mv composer.phar /usr/local/bin/composer
 # symfonyのCLIインストール
 RUN wget https://get.symfony.com/cli/installer -O - | bash
 RUN echo 'export PATH="$HOME/.symfony/bin:$PATH"' >> ~/.bash_profile
+RUN source ~/.bash_profile
 
 # oilコマンド(FuelPHPのCLI)インストール
 RUN curl https://get.fuelphp.com/oil | sh
